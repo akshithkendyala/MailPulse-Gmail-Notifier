@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Agent Preferences</title>
+  <style>
+    body { font-family: Arial, sans-serif; width: 300px; padding: 14px; margin: 0; }
+    h3 { margin-top: 0; font-size: 16px; color: #202124; }
+    .row { display: flex; gap: 6px; margin-bottom: 12px; }
+    input { flex: 1; padding: 7px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 7px 12px; background: #1a73e8; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #1557b0; }
+    ul { list-style: none; padding: 0; margin: 0 0 12px 0; }
+    li { display: flex; justify-content: space-between; align-items: center; background: #f1f3f4; padding: 6px 10px; border-radius: 4px; margin-bottom: 6px; font-size: 13px; }
+    .del { background: #d93025; padding: 3px 7px; font-size: 11px; }
+    .status { font-size: 12px; color: #188038; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h3>Notify Me For Keywords</h3>
+  <div class="row">
+    <input type="text" id="keywordInput" placeholder="e.g., internships, jobs, offers" />
+    <button id="addBtn">Add</button>
+  </div>
+  <ul id="keywordList"></ul>
+  <button id="connectBtn" style="width: 100%; background: #34a853;">Connect Gmail & Start Agent</button>
+  <div class="status" id="statusMsg"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

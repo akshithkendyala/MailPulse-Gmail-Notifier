@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtI+Qg1KBpmywv/T12iVKpGrvJKF2HpFH0iyHxiYS+4PPvY3tvCrK4E0MqOGM3m9hTOOng9ThyBobVxoPfu/JLCuv5vbwHWOweC2OOcoaRNjo7wECYKn6vLMpLFU/H6OsrQ/0MvXPQk+pFBpqdtJbxwdPrWHvocrlFMbomEXeeLxKp0r0HIvgn8fT+OuKnmf31VOtStP4gMfhC3RSCZKGnd0FvhB4oEx9AMq3nUN3v16+i37shYahw4NrJnrADzz4fOSiYg0FcI6YNYrLahV/bYGnV0sd+2ZXCJPu67yJl151QEiDwwzOFegDZvXxaJdiIBWmcxEqusakxKVFjnf4iQIDAQAB",
+  "name": "MailPulse Gmail Interest Notifier",
+  "version": "1.0.0",
+  "description": "Scans incoming Gmail messages and sends desktop notifications only for your chosen keywords.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "identity",
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://gmail.googleapis.com/*",
+    "https://www.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Configure Email Keywords",
+    "default_icon": "icon.png"
+  },
+  "oauth2": {
+    "client_id": "573479877652-8r7minjruk7842ajtu3cfgj3c63ii7k2.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  }
+}
